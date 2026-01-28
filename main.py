@@ -10,7 +10,7 @@ PUSH_TOKEN = os.environ.get("PUSH_TOKEN")
 
 # 配置 Gemini
 if not API_KEY:
-    print("❌ 错误：未找到 API_KEY (Gemini)。请在 GitHub Secrets 中配置。")
+    print("❌ 错误：未找到 API_KEY (Gemini)。请在 GitHub Secrets 中配置1。")
     exit(1)
 
 # 初始化新版客户端
