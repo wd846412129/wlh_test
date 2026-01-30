@@ -64,7 +64,7 @@ def push_wechat(content):
     
     data = {
         "token": PUSH_TOKEN,
-        "title": "今日反洗钱简报",
+        "title": "今日模型管理信息简报",
         "content": content,
         "template": "markdown"
     }
@@ -79,12 +79,12 @@ def push_wechat(content):
 
 if __name__ == "__main__":
     
-    print("🕒 开始执行每日反洗钱简报任务...")
+    print("🕒 开始执行每日模型管理信息简报任务...")
     
     report = generate_aml_report()
     
     if report:
-        if "无重大反洗钱监管动态" not in report:
+        if "无重大模型管理信息动态" not in report:
             push_wechat(report)
         else:
             print("⚠️ AI 判断今日无重要内容，部分推送或跳过。")
